@@ -20,6 +20,7 @@ export class EventDrivenResizeObserver {
     public observe(target: Element, callback: EventDrivenResizeObserverCallbackType) {
         let eventWithTarget = this.getEventByTarget(target);
 
+        // prepare if first callback of target
         if (!eventWithTarget) {
             eventWithTarget = {
                 target,
@@ -29,6 +30,9 @@ export class EventDrivenResizeObserver {
             this.listOfEventWithTarget.push(eventWithTarget);
             this.resizeObserver.observe(target);
         }
+
+        // subscribe to event that belongs to target
+        eventWithTarget.event.subscribe(callback);
 
         const unobserve: UnobserveEventDrivenResizeObserver = () => {
             this.unobserve(target, callback);
@@ -43,7 +47,7 @@ export class EventDrivenResizeObserver {
         if (eventWithTarget) {
             eventWithTarget.event.unsubscribe(callback);
 
-            if (eventWithTarget.event.length() === 0) {
+            if (eventWithTarget.event.length === 0) {
                 this.listOfEventWithTarget = this.listOfEventWithTarget.filter(function (eventWithTarget) {
                     return !eventWithTarget.target.isSameNode(target);
                 });

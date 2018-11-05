@@ -20,12 +20,20 @@ module.exports = {
       }
     ]
   },
-  externals: [nodeExternals()],
+  externals: {
+    "@teronis-js/event-dispatcher": {
+      commonjs: "@teronis-js/event-dispatcher",
+      commonjs2: "@teronis-js/event-dispatcher",
+      amd: "@teronis-js/event-dispatcher",
+      root: ["Teronis", "EventDispatcher"],
+    }
+  },
   output: {
     filename: path.basename(PackageFile.main),
     path: path.resolve(__dirname, path.dirname(PackageFile.main)),
     library: ["Teronis", "EventDrivenResizeObserver"],
-    libraryTarget: "umd"
+    libraryTarget: "umd",
+    umdNamedDefine: true
   },
   resolve: {
     modules: [path.join(__dirname, 'src'), "node_modules"],

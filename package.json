@@ -30,7 +30,7 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-typescript": "^7.1.0",
-    "@teronis-js/event-dispatcher": "github:teroneko/teronis-js-event-dispatcher#semver:~v0.1.0",
+    "@teronis-js/event-dispatcher": "github:teroneko/teronis-js-event-dispatcher#semver:~v0.2.0",
     "@teronis/webpack-dts-bundle": "^1.0.2-teronified",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
