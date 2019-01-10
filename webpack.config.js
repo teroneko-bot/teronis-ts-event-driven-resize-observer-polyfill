@@ -21,10 +21,10 @@ module.exports = {
     ]
   },
   externals: {
-    "@teronis-js/event-dispatcher": {
-      commonjs: "@teronis-js/event-dispatcher",
-      commonjs2: "@teronis-js/event-dispatcher",
-      amd: "@teronis-js/event-dispatcher",
+    "@teronis/ts-event-dispatcher": {
+      commonjs: "@teronis/ts-event-dispatcher",
+      commonjs2: "@teronis/ts-event-dispatcher",
+      amd: "@teronis/ts-event-dispatcher",
       root: ["Teronis", "EventDispatcher"],
     }
   },

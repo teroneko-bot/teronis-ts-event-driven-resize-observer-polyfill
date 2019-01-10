@@ -1,4 +1,4 @@
-import { ArgtiveEvent } from "@teronis-js/event-dispatcher";
+import { ArgtiveEvent } from "@teronis/ts-event-dispatcher";
 import ResizeObserver from "resize-observer-polyfill";
 
 export type EventDrivenResizeObserverCallbackType = (entry: ResizeObserverEntry, observer: EventDrivenResizeObserver) => void;

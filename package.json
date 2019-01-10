@@ -1,18 +1,19 @@
 {
-  "name": "@teronis-js/event-driven-resize-observer-polyfill",
+  "name": "@teronis/ts-event-driven-resize-observer-polyfill",
   "version": "0.1.0",
   "description": "",
-  "private": true,
-  "main": "dist/teronis-js-event-driven-resize-observer-polyfill.js",
+  "private": false,
+  "main": "dist/teronis-ts-event-driven-resize-observer-polyfill.js",
   "source": "src/index.ts",
-  "types": "dist/teronis-js-event-driven-resize-observer-polyfill.d.ts",
+  "types": "dist/teronis-ts-event-driven-resize-observer-polyfill.d.ts",
   "scripts": {
+    "prepublish": "npm run build",
     "test": "mocha -r jsdom-global/register || true",
     "build": "webpack || true"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teroneko/teronis-js-event-driven-resize-observer-polyfill.git"
+    "url": "git+https://github.com/teroneko/teronis-ts-event-driven-resize-observer-polyfill.git"
   },
   "keywords": [
     "teronis",
@@ -23,14 +24,14 @@
   "author": "teroneko",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/teroneko/teronis-js-event-driven-resize-observer-polyfill/issues"
+    "url": "https://github.com/teroneko/teronis-ts-event-driven-resize-observer-polyfill/issues"
   },
-  "homepage": "https://github.com/teroneko/teronis-js-event-driven-resize-observer-polyfill#readme",
+  "homepage": "https://github.com/teroneko/teronis-ts-event-driven-resize-observer-polyfill#readme",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-typescript": "^7.1.0",
-    "@teronis-js/event-dispatcher": "github:teroneko/teronis-js-event-dispatcher#semver:~v0.2.0",
+    "@teronis/ts-event-dispatcher": "~0.4.0",
     "@teronis/webpack-dts-bundle": "^1.0.2-teronified",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
