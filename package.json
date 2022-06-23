@@ -37,7 +37,7 @@
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "dts-bundle": "^0.7.3",
-    "jsdom": "^12.2.0",
+    "jsdom": "^16.5.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",
     "resize-observer-polyfill": "^1.5.0",
